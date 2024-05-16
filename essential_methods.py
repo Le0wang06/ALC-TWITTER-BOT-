@@ -22,3 +22,18 @@ for follower in user.followers():
     print(follower.name) # prints our the name. Or here It will print out 20 names that represent last 20 followers.
 
 
+
+# Authenticate to Twitter
+auth = tweepy.OAuthHandler("CONSUMER_KEY", "CONSUMER_SECRET")
+auth.set_access_token("ACCESS_TOKEN", "ACCESS_TOKEN_SECRET")
+
+# Create API object
+api = tweepy.API(auth, wait_on_rate_limit=True,
+    wait_on_rate_limit_notify=True)
+
+
+#assuming we have already created an API object
+#now lets follow someone on the twitter using your bot.
+api.create_friendship("@username_that_you_want_to_add")
+
+
