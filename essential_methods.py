@@ -41,4 +41,22 @@ api.create_friendship("@username_that_you_want_to_add")
 timeline = api.home_timeline()
 
 
+#with this timeline you can do many other things 
+
+
+# you can mark any tweet as Liked or remove the Like mark if it was already added.
+
+#using timeline you can easily access the most recent tweet and then like it. 
+
+tweets = api.home_timeline(count=1)
+tweet = tweets[0]  #within the Tweets you access the index "0" which is the first one. In this organized method list. It seems like 0 will represent the most recent.
+print(f"Liking tweet {tweet.id} of {tweet.author.name}")
+
+api.create_favorite(tweet.id) # this will be liking the tweet.
+#tweet is the object so you could access the id by doing "tweet.id" and then also getting the "tweet.author", this will give you the author of the tweet but mostlikely an object or an element and this is why 
+# we will use the .name method to find it's name.
+
+
+
+
 
