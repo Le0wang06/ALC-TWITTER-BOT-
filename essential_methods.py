@@ -36,4 +36,9 @@ api = tweepy.API(auth, wait_on_rate_limit=True,
 #now lets follow someone on the twitter using your bot.
 api.create_friendship("@username_that_you_want_to_add")
 
+#very important access for this bot is the timeline. This will be shown below: 
+# These methods deal with reading tweets, mentions, and retweets from your timeline or any other user’s timeline, as long as it’s public. 
+timeline = api.home_timeline()
+
+
 
