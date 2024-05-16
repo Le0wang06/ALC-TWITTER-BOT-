@@ -58,5 +58,3 @@ api.create_favorite(tweet.id) # this will be liking the tweet.
 
 
 
-
-
