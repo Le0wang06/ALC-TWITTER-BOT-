@@ -3,6 +3,9 @@
 import tweepy
 import logging
 
+#logging is a way to track events happening. This can help us better organize our tasks
+# https://docs.python.org/3/library/logging.html <------ direct library to the logging documentations
+
 class TwitterBot:
     def __init__(self, auth):
         self.api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
